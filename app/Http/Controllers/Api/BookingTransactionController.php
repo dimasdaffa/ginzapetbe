@@ -24,12 +24,12 @@ class BookingTransactionController extends Controller
                 $validatedData['proof'] = $filePath; //Proof bukti pembayaran.png
             }
 
-            // Retrieve the service IDs from the request
+            // Retrieve the product IDs from the request
             // No need to decode JSON anymore, as it's sent as an array
-            $productIds = $request->input('service_ids');
+            $productIds = $request->input('product_ids');
 
             if (empty($productIds)) {
-                return response()->json(['message' => 'No services selected!'], 400);
+                return response()->json(['message' => 'No products selected!'], 400);
             }
 
             // Fetch products from the database
