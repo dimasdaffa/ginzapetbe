@@ -14,6 +14,15 @@ class CategoryApiResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'slug' => $this->slug,
+            'photo' => $this->photo,
+            'photo_white' => $this->photo_white,
+            'products_count' => $this->product_services_count,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
+        ];
     }
 }

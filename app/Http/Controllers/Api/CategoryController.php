@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\Api\ProductApiResource;
+use App\Http\Resources\Api\CategoryApiResource;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -24,11 +24,9 @@ class CategoryController extends Controller
 
     public function show(Category $category)
     {
-        $category->load('productServices','popularServices');
+        $category->load('productServices', 'popularServices');
         $category->loadCount('productServices');
 
         return new CategoryApiResource($category);
     }
-
-
 }
