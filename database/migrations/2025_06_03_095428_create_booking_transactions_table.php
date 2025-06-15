@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('phone');
             $table->string('email');
-            $table->string('started_time');
+            // $table->string('started_time');
             $table->date('schedule_at');
             $table->string('proof');
             $table->string('post_code');

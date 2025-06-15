@@ -15,7 +15,7 @@ class BookingTransaction extends Model
         'name',
         'phone',
         'email',
-        'started_time',
+        // 'started_time',
         'schedule_at',
         'proof',
         'post_code',

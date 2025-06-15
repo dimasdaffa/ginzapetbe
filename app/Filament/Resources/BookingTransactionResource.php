@@ -131,8 +131,8 @@ class BookingTransactionResource extends Resource
                                         ->maxLength(255),
                                     Forms\Components\DatePicker::make('schedule_at')
                                         ->required(),
-                                    Forms\Components\TimePicker::make('started_time')
-                                        ->required(),
+                                    // Forms\Components\TimePicker::make('started_time')
+                                    //     ->required(),
                                     Forms\Components\Textarea::make('address')
                                         ->required()
                                         ->maxLength(255),

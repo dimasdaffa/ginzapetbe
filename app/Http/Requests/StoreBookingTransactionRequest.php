@@ -28,7 +28,7 @@ class StoreBookingTransactionRequest extends FormRequest
             'city' => 'required|string|max:255',
             'address' => 'required|string|max:255',
             'post_code' => 'required|string|max:255',
-            'started_time' => 'required|date_format:H:i',
+            // 'started_time' => 'required|date_format:H:i',
             'schedule_at' => 'required|date_format:Y-m-d', // Added schedule_at as it's in the form
             'proof' => 'required|file|mimes:jpg,jpeg,png|max:2048', // Corrected image extension
             'product_ids' => 'required|array', // This seems to be the array of selected service IDs
