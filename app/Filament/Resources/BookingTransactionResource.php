@@ -23,6 +23,10 @@ class BookingTransactionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
+    protected static ?string $navigationLabel = 'Order Transaction';
+
+    protected static ?string $modelLabel = 'Order Transaction';
+
     public static function updateTotals(Get $get, Set $set): void
     {
         $selectedproductServices = collect($get('transactionDetails'))
@@ -175,7 +179,8 @@ class BookingTransactionResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('booking_trx_id')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Order ID'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime() // Assuming it's a datetime column
                     ->sortable() // Added based on typical usage
